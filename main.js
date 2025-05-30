@@ -16,8 +16,12 @@ const controls = new OrbitControls(camera, renderer.domElement);
 const gridHelper = new THREE.GridHelper();
 scene.add(gridHelper);
 
+const axesHelper = new THREE.AxesHelper(10);
+axesHelper.position.set(-5, 0, - 5);
+scene.add(axesHelper);
+
 const pyramid = new THREE.Mesh(new THREE.TetrahedronGeometry(), new THREE.MeshNormalMaterial());
-scene.add(pyramid)
+scene.add(pyramid);
 
 function animate() {
     pyramid.rotation.x += 0.01;
